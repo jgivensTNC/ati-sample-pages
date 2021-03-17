@@ -16,10 +16,24 @@ import platformIndependentCore.core.AutomatedPage;
 public class SampleBase extends AutomatedPage {
 
 	/**
+	 * HI
+	 */
+	public static final String HI = "Hi";
+	/**
+	 * HELLO
+	 */
+	public static final String HELLO = "Hello";
+	/**
+	 * WORLD
+	 */
+	public static final String WORLD = "World";
+
+	/**
 	 * Constructor
 	 */
 	public SampleBase() {
 		// TODO Auto-generated constructor stub
+
 	}
 
 }

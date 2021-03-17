@@ -51,7 +51,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub OWNER Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/department-of-veterans-affairs/PROJECTREPONAME</url>
+			<url>https://maven.pkg.github.com/jgivensTNC/ati-sample-pages</url>
 		</repository>
 	</distributionManagement>
 </project>
