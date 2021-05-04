@@ -1,6 +1,7 @@
 package samplePageClasses;
 
 import platformIndependentCore.core.AutomatedPage;
+import platformIndependentCore.utilities.ConfigProperties;
 
 /**
  * <b>Name :</b> SampleBase.java
@@ -21,13 +22,16 @@ public class SampleBase extends AutomatedPage {
 	public static final String FIVE = "5";
 	public static final String SIX = "6";
 
+	private static final String SAMPLE_URL = ConfigProperties.getValue("SAMPLE_URL");
+
 	/**
 	 * Constructor
 	 */
-	public SampleBase() {
-		System.out.println("Example");
-		// comment
-		System.out.println("Teest");
+	public SampleBase(String url) {
+//		System.out.println("Example");
+//		// comment
+//		System.out.println("Teest");
+		setPageURL(SAMPLE_URL + url);
 	}
 
 }
