@@ -13,14 +13,13 @@ package samplePageClasses;
  */
 public class HomePage extends SampleBase {
 	/** ADDRESS for page */
-	private static final String ADDRESS = "maps";
+	private static final String ADDRESS = BASE_URL + "home";
 
 	/**
 	 * Constructor
 	 */
 	public HomePage() {
 		super(ADDRESS);
-
 	}
 
 	/**

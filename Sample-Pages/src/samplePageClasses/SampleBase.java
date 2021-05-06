@@ -1,6 +1,7 @@
 package samplePageClasses;
 
 import platformIndependentCore.core.AutomatedPage;
+import platformIndependentCore.exceptions.InvalidParameterException;
 import platformIndependentCore.utilities.ConfigProperties;
 
 /**
@@ -14,24 +15,20 @@ import platformIndependentCore.utilities.ConfigProperties;
  * @author crudisill
  * @since Mar 15, 2021
  */
-public class SampleBase extends AutomatedPage {
-	public static final String ONE = "1";
-	public static final String TWO = "2";
-	public static final String THREE = "3";
-	public static final String FOUR = "4";
-	public static final String FIVE = "5";
-	public static final String SIX = "6";
-
-	private static final String SAMPLE_URL = ConfigProperties.getValue("SAMPLE_URL");
+public abstract class SampleBase extends AutomatedPage {
+	/** Sample Base URL */
+	protected static final String BASE_URL = ConfigProperties.getValue("SAMPLE_URL");
 
 	/**
-	 * Constructor
+	 * Base Constructor; Sets the page URL for the inheriting page object
+	 *
+	 * @param address page url
 	 */
-	public SampleBase(String url) {
-//		System.out.println("Example");
-//		// comment
-//		System.out.println("Teest");
-		setPageURL(SAMPLE_URL + url);
+	public SampleBase(String address) {
+		if (BASE_URL.isEmpty()) {
+			throw new InvalidParameterException("You must specify a value for BASE_URL in your config file.");
+		}
+		setPageURL(address);
 	}
 
 }
